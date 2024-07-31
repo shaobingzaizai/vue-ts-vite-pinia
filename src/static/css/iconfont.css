@@ -1,0 +1,118 @@
+@font-face {
+  src: url("https://at.alicdn.com/t/c/font_4534201_by00re7egec.woff2?t=1719829479124")
+      format("woff2"),
+    url("https://at.alicdn.com/t/c/font_4534201_by00re7egec.woff?t=1719829479124")
+      format("woff"),
+    url("https://at.alicdn.com/t/c/font_4534201_by00re7egec.ttf?t=1719829479124")
+      format("truetype");
+  font-family: "iconfont"; /* Project id 4534201 */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-question-o::before {
+  content: "\e65d";
+}
+.icon-quyu::before {
+  content: "\e624";
+}
+.icon-kazuo1::before {
+  content: "\e625";
+}
+.icon-shijian::before {
+  content: "\e626";
+}
+.icon-dingjin::before {
+  content: "\e628";
+}
+.icon-search::before {
+  content: "\e651";
+}
+.icon-loading::before {
+  content: "\e627";
+}
+.icon-lianai1::before {
+  content: "\e61c";
+}
+.icon-pengyou::before {
+  content: "\e616";
+}
+.icon-mianji::before {
+  content: "\e617";
+}
+.icon-dazi::before {
+  content: "\e618";
+}
+.icon-yuejiu::before {
+  content: "\e619";
+}
+.icon-weixin::before {
+  content: "\e61a";
+}
+.icon-lianai::before {
+  content: "\e61b";
+}
+.icon-close::before {
+  content: "\e61f";
+}
+.icon-notice::before {
+  content: "\e62b";
+}
+.icon-right::before {
+  content: "\e721";
+}
+.icon-luchuan::before {
+  content: "\e615";
+}
+.icon-touqi::before {
+  content: "\e60f";
+}
+.icon-bengdi::before {
+  content: "\e610";
+}
+.icon-liaotian::before {
+  content: "\e611";
+}
+.icon-sanbu::before {
+  content: "\e612";
+}
+.icon-kazuo::before {
+  content: "\e613";
+}
+.icon-jianmian::before {
+  content: "\e614";
+}
+.icon-WIFI::before {
+  content: "\e60e";
+}
+.icon-jifen::before {
+  content: "\e60c";
+}
+.icon-yaoqing::before {
+  content: "\e60d";
+}
+.icon-fenxiang::before {
+  content: "\e609";
+}
+.icon-kefuweixin::before {
+  content: "\e60a";
+}
+.icon-shuaxin::before {
+  content: "\e60b";
+}
+.icon-keruchangquanxian::before {
+  content: "\e608";
+}
+.icon-kefudianhua::before {
+  content: "\e606";
+}
+.icon-dizhi::before {
+  content: "\e605";
+}
+.icon-kefu::before {
+  content: "\e601";
+}
