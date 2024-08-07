@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useStore } from '@/store/pinia';
 
 const { themeObject } = useStore('app');
 console.log('themeObject', themeObject);

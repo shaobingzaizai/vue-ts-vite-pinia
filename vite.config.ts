@@ -1,9 +1,40 @@
+import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import uni from '@dcloudio/vite-plugin-uni';
+import PiniaAutoRefs from 'pinia-auto-refs';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [uni()],
+	resolve: {
+		alias: {
+			'@': resolve(__dirname, 'src')
+		}
+	},
+	plugins: [
+		uni(),
+		PiniaAutoRefs(),
+		AutoImport({
+			dts: 'src/auto-imports.d.ts',
+			imports: [
+				'vue',
+				'uni-app',
+				'pinia',
+				{
+					'@/store/pinia-auto-refs': ['useStore']
+				}
+			],
+			exclude: ['createApp'],
+			eslintrc: {
+				enabled: true
+			}
+		}),
+		Components({
+			extensions: ['vue'],
+			dts: 'src/components.d.ts'
+		})
+	],
 	server: {
 		open: true, // 自动打开
 		proxy: {
