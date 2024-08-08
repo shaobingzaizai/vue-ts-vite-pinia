@@ -1,0 +1,26 @@
+{
+	"editor.tabSize": 4,
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": "explicit"
+	},
+	"stylelint.validate": ["css", "scss", "vue", "html"],
+	"eslint.validate": ["typescript", "vue", "html", "json"],
+	"files.associations": {
+		"*.json": "jsonc"
+	},
+	"volar.inlayHints.eventArgumentInInlineHandlers": false,
+	"cSpell.words": [
+		"agreeprivacyauthorization",
+		"CDKEXCHANDE",
+		"EQUITYDISTRIBUTION",
+		"loadmore",
+		"nomore",
+		"scrolltolower",
+		"scrolltoupper",
+		"wechat"
+	],
+	"editor.inlineSuggest.showToolbar": "onHover",
+	"vue-i18n.i18nPaths": ""
+}

@@ -11,7 +11,7 @@ module.exports = {
 	// 书写宽度
 	printWidth: 100,
 	// 缩进字节数
-	tabWidth: 4,
+	tabWidth: 2,
 	// 语句末尾打印分号
 	semi: true,
 	// 使用单引号

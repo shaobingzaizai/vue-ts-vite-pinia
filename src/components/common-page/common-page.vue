@@ -1,5 +1,6 @@
 <template>
 	<view class="common-page">
+		<NavBar />
 		<!-- ios禁止弹性滚动 -->
 		<scroll-view
 			v-if="disabledIosElasticity"
@@ -31,17 +32,17 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .common-page {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	.scroll-content {
-		position: relative;
-		flex: 1;
-	}
-	.view-content {
-		overflow: auto;
-		position: relative;
-		flex: 1;
-	}
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .scroll-content {
+        position: relative;
+        flex: 1;
+    }
+    .view-content {
+        overflow: auto;
+        position: relative;
+        flex: 1;
+    }
 }
 </style>
