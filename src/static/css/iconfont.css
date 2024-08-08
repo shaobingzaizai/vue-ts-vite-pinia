@@ -6,10 +6,10 @@
 			format('woff'),
 		url('https://at.alicdn.com/t/c/font_4534201_by00re7egec.ttf?t=1719829479124')
 			format('truetype');
-	font-family: 'iconfont'; /* Project id 4534201 */
+	font-family: iconfont; /* Project id 4534201 */
 }
 .iconfont {
-	font-family: 'iconfont' !important;
+	font-family: iconfont !important;
 	font-style: normal;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
