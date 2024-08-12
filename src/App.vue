@@ -2,7 +2,7 @@
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app';
 import { ThemeList } from '@/config/theme';
 
-const { selectTheme, SET_THEME_OBJECT } = useStore('app');
+const { selectTheme, SET_THEME_OBJECT, INIT_SYSTEM_INFO } = useStore('app');
 
 /**
  * 初始化主题颜色
@@ -13,6 +13,7 @@ const initTheme = () => {
 
 onLaunch(() => {
 	initTheme();
+	INIT_SYSTEM_INFO()
 });
 onShow(() => {
 	console.log('App Show');

@@ -13,7 +13,6 @@ export default defineConfig({
 		}
 	},
 	plugins: [
-		uni(),
 		PiniaAutoRefs(),
 		AutoImport({
 			dts: 'src/auto-imports.d.ts',
@@ -31,9 +30,11 @@ export default defineConfig({
 			}
 		}),
 		Components({
+			dirs: ['src/components'],
 			extensions: ['vue'],
 			dts: 'src/components.d.ts'
-		})
+		}),
+		uni()
 	],
 	server: {
 		open: true, // 自动打开

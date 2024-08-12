@@ -1,5 +1,5 @@
 <template>
-	<CommonPage>
+	<CommonPage :disabled-ios-elasticity="true" fixed="static" :is-back="false" title="home">
 		<view class="content">
 			<image class="logo" src="/static/logo.png" />
 			<view class="text-area">
@@ -14,30 +14,30 @@ import { ref } from 'vue';
 
 const { themeObject } = useStore('app');
 console.log('themeObject', themeObject);
-const title = ref('Hello');
+const title = ref('home');
 </script>
 
 <style lang="scss" scoped>
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .logo {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 200rpx;
-        margin-bottom: 50rpx;
-        width: 200rpx;
-        height: 200rpx;
-    }
-    .text-area {
-        display: flex;
-        justify-content: center;
-        .title {
-            font-size: 36rpx;
-            color: #8f8f94;
-        }
-    }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.logo {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 200rpx;
+		margin-bottom: 50rpx;
+		width: 200rpx;
+		height: 200rpx;
+	}
+	.text-area {
+		display: flex;
+		justify-content: center;
+		.title {
+			font-size: 36rpx;
+			color: #8f8f94;
+		}
+	}
 }
 </style>

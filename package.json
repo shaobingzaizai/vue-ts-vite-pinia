@@ -41,8 +41,7 @@
 		"build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
 		"build:quickapp-webview-union": "uni build -p quickapp-webview-union",
 		"type-check": "vue-tsc --noEmit",
-		"stylelint": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
-		"prepare": "husky install"
+		"stylelint": "stylelint \"src/**/*.(vue|scss|css)\" --fix"
 	},
 	"dependencies": {
 		"@dcloudio/uni-app": "3.0.0-alpha-4020320240703001",
@@ -80,7 +79,6 @@
 		"eslint-plugin-prettier": "^5.2.1",
 		"eslint-plugin-vue": "^9.27.0",
 		"globals": "^15.9.0",
-		"husky": "^8.0.0",
 		"postcss-html": "1.5.0",
 		"postcss-scss": "4.0.6",
 		"prettier": "^3.3.3",

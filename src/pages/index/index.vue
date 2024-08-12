@@ -1,15 +1,17 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png" />
-		<view class="text-area">
-			<text class="title">{{ title }}</text>
+	<CommonPage>
+		<view class="content">
+			<image class="logo" src="/static/logo.png" />
+			<view class="text-area">
+				<text class="title">{{ title }}</text>
+			</view>
 		</view>
-	</view>
+	</CommonPage>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const title = ref('Hello');
+const title = ref('index');
 </script>
 
 <style>

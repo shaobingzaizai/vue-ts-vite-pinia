@@ -1,14 +1,14 @@
 <template>
 	<view class="common-page">
-		<NavBar />
+		<NavBar
+			:fixed="fixed"
+			:is-back="isBack"
+			:is-back-home="isBackHome"
+			:title="title"
+			:bgColor="bgColor"
+		/>
 		<!-- ios禁止弹性滚动 -->
-		<scroll-view
-			v-if="disabledIosElasticity"
-			scroll-y
-			enhanced
-			:bounces="false"
-			class="content"
-		>
+		<scroll-view v-if="disabledIosElasticity" scroll-y enhanced :bounces="false" class="content">
 			<slot></slot>
 		</scroll-view>
 		<!-- 以前逻辑，采用默认配置 -->
@@ -26,23 +26,44 @@ const props = defineProps({
 	disabledIosElasticity: {
 		type: Boolean,
 		default: false
+	},
+	fixed: {
+		type: String,
+		default: 'static'
+	},
+	isBack: {
+		type: Boolean,
+		default: true
+	},
+	isBackHome: {
+		type: Boolean,
+		default: false
+	},
+	title: {
+		type: String,
+		default: ''
+	},
+	bgColor: {
+		type: String,
+		default: '#fff'
 	}
 });
+console.log('props', props);
 </script>
 
 <style lang="scss" scoped>
 .common-page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    .scroll-content {
-        position: relative;
-        flex: 1;
-    }
-    .view-content {
-        overflow: auto;
-        position: relative;
-        flex: 1;
-    }
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	.scroll-content {
+		position: relative;
+		flex: 1;
+	}
+	.view-content {
+		overflow: auto;
+		position: relative;
+		flex: 1;
+	}
 }
 </style>
