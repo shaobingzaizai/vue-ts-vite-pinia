@@ -8,7 +8,7 @@
 			}
 		},
 		{
-			"path": "pages/index/index",
+			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "index"
 			}
@@ -27,15 +27,14 @@
 		"selectedColor": "#FFFFFF",
 		"borderStyle": "black",
 		"backgroundColor": "#000000",
-		// "height": "0",
 		"list": [
 			{
 				"pagePath": "pages/home/home",
 				"text": "home"
 			},
 			{
-				"pagePath": "pages/index/index",
-				"text": "index"
+				"pagePath": "pages/my/my",
+				"text": "my"
 			}
 		]
 	}

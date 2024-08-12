@@ -41,7 +41,7 @@
  * 父类事件
  */
 const emits = defineEmits<{
-	(e: 'backEmit', item: any): void;
+	(e: 'back', item: any): void;
 }>();
 /**
  *  父类传参
@@ -63,21 +63,25 @@ const props = defineProps({
 const { navBarConfig } = useStore('app');
 const CustomBar: number = navBarConfig.value.CustomBar; // 高度
 const StatusBar: number = navBarConfig.value.StatusBar; // 状态栏高度
+const TheTabPage: any = ['pages/home/home'];
 
+// 判断当前页面前是否有页面
+const firstLevel = ref(true);
+onLoad(() => {
+	firstLevel.value = getCurrentPages().length === 1;
+});
 /**
  * 返回按钮
  */
 const cuBack = () => {
-	emits('backEmit', {});
-	uni.navigateBack({
-		delta: 1
-	});
-};
-const cuBackHome = () => {
-	emits('backEmit', {});
-	uni.switchTab({
-		url: '/pages/home/index'
-	});
+	emits('back', {});
+	if (firstLevel.value) {
+		uni.reLaunch({ url: 'pages/home/home' });
+	} else {
+		uni.navigateBack({
+			delta: 1
+		});
+	}
 };
 </script>
 

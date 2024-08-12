@@ -1,5 +1,5 @@
 <template>
-	<CommonPage>
+	<CommonPage fixed="static" :is-back="false" title="我的" :is-tab="true" :the-tab="1">
 		<view class="content">
 			<image class="logo" src="/static/logo.png" />
 			<view class="text-area">
@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const title = ref('index');
+const title = ref('my');
 </script>
 
 <style>

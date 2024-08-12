@@ -1,6 +1,30 @@
 <template>
-	<CommonPage :disabled-ios-elasticity="true" fixed="static" :is-back="false" title="home">
+	<CommonPage fixed="static" :is-back="false" title="home" :is-tab="true" :the-tab="0">
 		<view class="content">
+			<image class="logo" src="/static/logo.png" />
+			<view class="text-area">
+				<text class="title">{{ title }}</text>
+			</view>
+			<image class="logo" src="/static/logo.png" />
+			<view class="text-area">
+				<text class="title">{{ title }}</text>
+			</view>
+			<image class="logo" src="/static/logo.png" />
+			<view class="text-area">
+				<text class="title">{{ title }}</text>
+			</view>
+			<image class="logo" src="/static/logo.png" />
+			<view class="text-area">
+				<text class="title">{{ title }}</text>
+			</view>
+			<image class="logo" src="/static/logo.png" />
+			<view class="text-area">
+				<text class="title">{{ title }}</text>
+			</view>
+			<image class="logo" src="/static/logo.png" />
+			<view class="text-area">
+				<text class="title">{{ title }}</text>
+			</view>
 			<image class="logo" src="/static/logo.png" />
 			<view class="text-area">
 				<text class="title">{{ title }}</text>
@@ -13,7 +37,6 @@
 import { ref } from 'vue';
 
 const { themeObject } = useStore('app');
-console.log('themeObject', themeObject);
 const title = ref('home');
 </script>
 

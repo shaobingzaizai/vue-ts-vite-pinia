@@ -9,7 +9,7 @@
 module.exports = {
 	endOfLine: 'auto',
 	// 书写宽度
-	printWidth: 100,
+	printWidth: 80,
 	// 缩进字节数
 	tabWidth: 4,
 	// 语句末尾打印分号

@@ -7,6 +7,7 @@ export const ThemeKeyList = {
  */
 export const ThemeList: any = {
 	default: {
-		themeColor: '#000'
+		themeColor: '#ff42bf',
+		unThemeColor: '#888'
 	}
 };
