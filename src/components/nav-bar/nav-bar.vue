@@ -2,7 +2,7 @@
 	<view class="nav-bar-bg" :style="{ background: backgroundColor }">
 		<image v-if="backgroundUrl" class="bg" :src="backgroundUrl" mode="scaleToFill"></image>
 	</view>
-	<view class="cu-view" :style="{ height: CustomBar + 'px', position: props.fixed }">
+	<view class="cu-view" :style="{ height: CustomBar + 'px', position: fixed }">
 		<view
 			class="cu-custom"
 			:style="{
@@ -84,9 +84,9 @@ const cuBackHome = () => {
 <style lang="scss" scoped>
 .nav-bar-bg {
 	position: fixed;
-	left: 0;
-	right: 0;
 	top: 0;
+	right: 0;
+	left: 0;
 	z-index: -999;
 	width: 100vw;
 	height: 100vh;
@@ -100,12 +100,11 @@ const cuBackHome = () => {
 	z-index: 2048;
 	width: 100vw;
 	.cu-custom {
-		display: block;
 		position: fixed;
-		left: 0;
 		top: 0;
-		// box-shadow: 0 0 30rpx rgba(0, 0, 0, 0.1);
+		left: 0;
 		z-index: 2048;
+		display: block;
 		width: 100%;
 		height: 80rpx;
 		background-color: transparent;
@@ -127,21 +126,21 @@ const cuBackHome = () => {
 					}
 				}
 				.view2 {
-					margin-left: 20rpx;
-					border: 1rpx solid rgba(0, 0, 0, 0.35);
-					border-radius: 32rpx;
 					width: 150rpx;
 					height: 56rpx;
+					margin-left: 20rpx;
+					border: 1rpx solid rgb(0 0 0 / 35%);
+					border-radius: 32rpx;
 					transform: rotateZ(360deg);
 					.icon1 {
 						font-size: 40rpx;
 						color: #000;
 					}
 					.line {
-						margin: 0 20rpx;
 						width: 2rpx;
 						height: 37rpx;
-						background: rgba(0, 0, 0, 0.35);
+						margin: 0 20rpx;
+						background: rgb(0 0 0 / 35%);
 					}
 					.icon2 {
 						font-size: 36rpx;
@@ -150,17 +149,17 @@ const cuBackHome = () => {
 				}
 			}
 			.cu-center {
-				overflow: hidden; // 溢出部分隐藏
 				width: 50%;
-				text-overflow: ellipsis; // 显示省略号
-				font-weight: bold;
+				overflow: hidden; // 溢出部分隐藏
 				font-size: 32rpx;
+				font-weight: bold;
+				text-overflow: ellipsis; // 显示省略号
 				white-space: nowrap; // 文字不换行
 				> view {
-					overflow: hidden; // 溢出部分隐藏
 					width: 100%;
-					text-overflow: ellipsis; // 显示省略号
+					overflow: hidden; // 溢出部分隐藏
 					text-align: center;
+					text-overflow: ellipsis; // 显示省略号
 					white-space: nowrap; // 文字不换行
 				}
 			}
@@ -174,17 +173,17 @@ const cuBackHome = () => {
 }
 .row-center-start {
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
+	justify-content: flex-start;
 }
 .row-center-center {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 }
 .flex-row-between {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 }
 </style>

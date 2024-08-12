@@ -13,7 +13,7 @@ const initTheme = () => {
 
 onLaunch(() => {
 	initTheme();
-	INIT_SYSTEM_INFO()
+	INIT_SYSTEM_INFO();
 });
 onShow(() => {
 	console.log('App Show');

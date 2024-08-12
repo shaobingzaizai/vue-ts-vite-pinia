@@ -8,7 +8,13 @@
 			:bgColor="bgColor"
 		/>
 		<!-- ios禁止弹性滚动 -->
-		<scroll-view v-if="disabledIosElasticity" scroll-y enhanced :bounces="false" class="content">
+		<scroll-view
+			v-if="disabledIosElasticity"
+			scroll-y
+			enhanced
+			:bounces="false"
+			class="content"
+		>
 			<slot></slot>
 		</scroll-view>
 		<!-- 以前逻辑，采用默认配置 -->
@@ -61,9 +67,9 @@ console.log('props', props);
 		flex: 1;
 	}
 	.view-content {
-		overflow: auto;
 		position: relative;
 		flex: 1;
+		overflow: auto;
 	}
 }
 </style>

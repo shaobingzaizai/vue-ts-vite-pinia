@@ -21,15 +21,12 @@ const title = ref('home');
 .content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	.logo {
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 200rpx;
-		margin-bottom: 50rpx;
 		width: 200rpx;
 		height: 200rpx;
+		margin: 200rpx auto 50rpx;
 	}
 	.text-area {
 		display: flex;
