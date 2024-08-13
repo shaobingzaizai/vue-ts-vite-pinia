@@ -21,7 +21,7 @@ export default defineConfig({
 				'uni-app',
 				'pinia',
 				{
-					'@/store/pinia-auto-refs': ['useStore']
+					'@/helper/pinia-auto-refs': ['useStore']
 				}
 			],
 			exclude: ['createApp'],

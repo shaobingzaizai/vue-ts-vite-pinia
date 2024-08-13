@@ -1,5 +1,11 @@
 <template>
-	<CommonPage fixed="static" :is-back="false" title="home" :is-tab="true" :the-tab="0">
+	<CommonPage
+		fixed="static"
+		:is-back="false"
+		title="home"
+		:is-tab="true"
+		:the-tab="0"
+	>
 		<view class="content">
 			<image class="logo" src="/static/logo.png" />
 			<view class="text-area">
@@ -35,9 +41,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import HomeApi from '@/api/home';
 
 const { themeObject } = useStore('app');
 const title = ref('home');
+
+onLoad(async () => {
+	await HomeApi.getMerchantList();
+});
 </script>
 
 <style lang="scss" scoped>
