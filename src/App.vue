@@ -16,7 +16,7 @@ onLaunch(() => {
 	INIT_SYSTEM_INFO();
 });
 onShow(() => {
-	console.log('App Show', uni.getSystemInfoSync());
+	console.log('App Show');
 });
 onHide(() => {
 	console.log('App Hide');

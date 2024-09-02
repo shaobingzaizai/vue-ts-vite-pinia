@@ -35,13 +35,16 @@ export default defineStore({
 				uni.getSystemInfo({
 					success: (e: any) => {
 						// 微信
+						// #ifdef MP-WEIXIN
 						const Custom = uni.getMenuButtonBoundingClientRect();
 						const config: any = {
 							StatusBar: e.statusBarHeight,
 							Custom,
-							CustomBar: Custom.bottom + Custom.top - e.statusBarHeight
+							CustomBar:
+								Custom.bottom + Custom.top - e.statusBarHeight
 						};
 						this.navBarConfig = { ...config };
+						// #endif
 						resolve(null);
 					}
 				});

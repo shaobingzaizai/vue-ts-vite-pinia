@@ -11,6 +11,19 @@
 			<view class="text-area">
 				<text class="title">{{ title }}</text>
 			</view>
+			<!-- 这是一个通用模板部分 -->
+			<text>Hello, Uni-app!</text>
+
+			<!-- 微信小程序特有的部分 -->
+			<!-- #ifdef MP-WEIXIN -->
+			<button open-type="getUserInfo">微信登录</button>
+			<!-- #endif -->
+
+			<!-- H5 特有的部分 -->
+			<!-- #ifdef H5 -->
+			<button>网页登录</button>
+			<!-- #endif -->
+
 			<image class="logo" src="/static/logo.png" />
 			<view class="text-area">
 				<text class="title">{{ title }}</text>

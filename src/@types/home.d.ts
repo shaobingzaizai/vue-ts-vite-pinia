@@ -20,4 +20,20 @@ declare namespace Home {
 		 */
 		name?: string;
 	}
+	/**
+	 * 请求数据
+	 *
+	 * SystemOpenScreenResp
+	 */
+	interface SystemOpenScreenResp {
+		/**
+		 * 开屏页类型：1图片，2视频
+		 */
+		openScreenType?: number | null;
+		/**
+		 * 开屏页地址
+		 */
+		openScreenUrl?: null | string;
+		[property: string]: any;
+	}
 }
