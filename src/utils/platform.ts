@@ -38,6 +38,7 @@ function ifDefPlatform(): EPlatform {
 	platform = EPlatform.AppPlusNvue;
 	// #endif
 	// #ifdef H5
+	console.log('h5');
 	platform = EPlatform.H5;
 	// #endif
 	// #ifdef MP-ALIPAY
@@ -56,6 +57,7 @@ function ifDefPlatform(): EPlatform {
 	platform = EPlatform.Mp360;
 	// #endif
 	// #ifdef MP
+	console.log('Mp');
 	platform = EPlatform.Mp;
 	// #endif
 	// #ifdef quickapp-webview
@@ -75,6 +77,8 @@ function ifDefPlatform(): EPlatform {
 
 /** 平台类型 */
 export const platform: EPlatform = ifDefPlatform();
+
+console.log('pl', platform);
 
 /** H5 */
 export const isH5 = platform === EPlatform.H5;

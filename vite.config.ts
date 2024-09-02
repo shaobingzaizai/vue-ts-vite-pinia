@@ -43,8 +43,7 @@ export default defineConfig({
 			// 正则表达式写法
 			// 针对h5 本地打包
 			'^/api': {
-				// target: "https://testkezee.vspo.cn/ins-sns-api", // 后端服务实际地址
-				target: 'http://192.168.27.1:39080',
+				target: 'https://www.mmweb.top',
 				changeOrigin: true, // 开启代理
 				rewrite: (path) => path.replace(/^\/api/, '')
 			}

@@ -1,6 +1,4 @@
 const env = import.meta.env;
-const accountInfo = uni.getAccountInfoSync();
-const envVersion = accountInfo.miniProgram.envVersion;
 export const apiEnv: ApiEnv =
 	env.VITE_USER_NODE_ENV === 'development' ? 'dev' : 'prod';
 // export const apiEnv: ApiEnv = "prod";

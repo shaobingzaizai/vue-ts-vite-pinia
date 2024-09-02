@@ -16,10 +16,14 @@ onLaunch(() => {
 	INIT_SYSTEM_INFO();
 });
 onShow(() => {
-	console.log('App Show');
+	console.log('App Show', uni.getSystemInfoSync());
 });
 onHide(() => {
 	console.log('App Hide');
 });
 </script>
-<style></style>
+<style lang="scss">
+.uni-tabbar-bottom {
+	display: none;
+}
+</style>

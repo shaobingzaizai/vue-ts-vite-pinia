@@ -1,8 +1,17 @@
 <template>
 	<view class="nav-bar-bg" :style="{ background: backgroundColor }">
-		<image v-if="backgroundUrl" class="bg" :src="backgroundUrl" mode="scaleToFill"></image>
+		<image
+			v-if="backgroundUrl"
+			class="bg"
+			:src="backgroundUrl"
+			mode="scaleToFill"
+		></image>
 	</view>
-	<view class="cu-view" :style="{ height: CustomBar + 'px', position: fixed }">
+	<view
+		v-if="false"
+		class="cu-view"
+		:style="{ height: CustomBar + 'px', position: fixed }"
+	>
 		<view
 			class="cu-custom"
 			:style="{
@@ -13,11 +22,17 @@
 		>
 			<view
 				class="cu-content flex-row-between"
-				:style="{ height: CustomBar - StatusBar + 'px', marginTop: StatusBar + 'px' }"
+				:style="{
+					height: CustomBar - StatusBar + 'px',
+					marginTop: StatusBar + 'px'
+				}"
 			>
 				<view class="cu-left row-center-start">
 					<view v-if="props.isBackHome" class="view1">
-						<text class="iconfont icon-home icon" @click="cuBack"></text>
+						<text
+							class="iconfont icon-home icon"
+							@click="cuBack"
+						></text>
 					</view>
 					<view v-else-if="isBack" class="view1" @click="cuBack">
 						<text class="iconfont icon-left1 icon"></text>
@@ -37,6 +52,9 @@
 </template>
 
 <script lang="ts" setup>
+import { isMpWeixin, platform } from '@/utils/platform';
+
+console.log('is', isMpWeixin, platform);
 /**
  * 父类事件
  */
