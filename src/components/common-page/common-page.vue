@@ -1,6 +1,7 @@
 <template>
 	<view class="common-page">
 		<NavBar
+			v-if="isShowNav"
 			:fixed="fixed"
 			:is-back="isBack"
 			:is-back-home="isBackHome"
@@ -107,6 +108,13 @@ const props = defineProps({
 	theTab: {
 		type: Number,
 		default: 0
+	},
+	/**
+	 * 是否显示顶部导航
+	 */
+	isShowNav: {
+		type: Boolean,
+		default: true
 	}
 });
 </script>
@@ -120,7 +128,7 @@ const props = defineProps({
 		position: relative;
 		flex: 1;
 		&.bar-bottom {
-			padding: 0 0 calc(100rpx + env(safe-area-inset-bottom));
+			padding: 0 0 calc(80rpx + env(safe-area-inset-bottom));
 		}
 	}
 	.view-content {
@@ -128,7 +136,7 @@ const props = defineProps({
 		flex: 1;
 		overflow: auto;
 		&.bar-bottom {
-			padding: 0 0 calc(100rpx + env(safe-area-inset-bottom));
+			padding: 0 0 calc(80rpx + env(safe-area-inset-bottom));
 		}
 	}
 }

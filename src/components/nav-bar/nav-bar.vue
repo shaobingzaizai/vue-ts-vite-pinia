@@ -8,7 +8,7 @@
 		></image>
 	</view>
 	<view
-		v-if="false"
+		v-if="isMpWeixin"
 		class="cu-view"
 		:style="{ height: CustomBar + 'px', position: fixed }"
 	>
@@ -78,7 +78,7 @@ const props = defineProps({
 		enum: ['static', 'relative', 'absolute', 'fixed', 'sticky']
 	} // 布局样式 是否占位
 });
-const { navBarConfig } = useStore('app');
+const { navBarConfig, themeObject } = useStore('app');
 const CustomBar: number = navBarConfig.value.CustomBar; // 高度
 const StatusBar: number = navBarConfig.value.StatusBar; // 状态栏高度
 const TheTabPage: any = ['pages/home/home'];
@@ -96,9 +96,7 @@ const cuBack = () => {
 	if (firstLevel.value) {
 		uni.reLaunch({ url: 'pages/home/home' });
 	} else {
-		uni.navigateBack({
-			delta: 1
-		});
+		uni.navigateBack();
 	}
 };
 </script>
@@ -130,6 +128,7 @@ const cuBack = () => {
 		width: 100%;
 		height: 80rpx;
 		background-color: transparent;
+		// border-bottom: 2rpx solid #eee;
 		&.no-shadow {
 			box-shadow: 0 0 black;
 		}
@@ -166,7 +165,7 @@ const cuBack = () => {
 					}
 					.icon2 {
 						font-size: 36rpx;
-						color: #000;
+						color: v-bind('themeObject.navFontColor');
 					}
 				}
 			}
@@ -190,7 +189,7 @@ const cuBack = () => {
 	.cu-custom-blank {
 		width: 100%;
 		height: 80rpx;
-		background-color: #fff;
+		background-color: transparent;
 	}
 }
 .row-center-start {

@@ -11,13 +11,19 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "home"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/book/book",
+			"style": {
+				"navigationBarTitleText": "预约"
 			}
 		},
 		{
 			"path": "pages/my/my",
 			"style": {
-				"navigationBarTitleText": "index"
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
@@ -37,11 +43,11 @@
 		"list": [
 			{
 				"pagePath": "pages/home/home",
-				"text": "home"
+				"text": "首页"
 			},
 			{
 				"pagePath": "pages/my/my",
-				"text": "my"
+				"text": "我的"
 			}
 		]
 	}

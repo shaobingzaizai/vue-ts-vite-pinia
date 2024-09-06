@@ -1,3 +1,11 @@
+/*
+ * @Author: Wolf.Ma
+ * @Date: 2024-09-02 21:36:57
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2024-09-07 00:11:39
+ * @FilePath: /zhenghe/src/config/env.ts
+ * @Description:
+ */
 const env = import.meta.env;
 export const apiEnv: ApiEnv =
 	env.VITE_USER_NODE_ENV === 'development' ? 'dev' : 'prod';
@@ -7,7 +15,7 @@ console.log('env', env.VITE_USER_NODE_ENV);
 const envMap = {
 	dev: {
 		apiBaseUrl: 'https://instest.vspo.cn/ins-sns-api',
-		imgBaseUrl: 'https://testcdn.vspo.cn/ins/images'
+		imgBaseUrl: '/static/zhenghe'
 	},
 	prod: {
 		apiBaseUrl: 'https://www.mmweb.top',
